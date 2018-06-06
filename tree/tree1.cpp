@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 typedef long long ll;
 using namespace std;
-
+ll max_value = INT_MIN;
 struct node
 {
 	ll data,lh,rh;
@@ -17,15 +17,17 @@ struct node* addnode(int val){
 }
 
 int finddia(struct node* ptr){
-	ll max_value = INT_MIN;
+	
 	if(ptr){
 		ptr->lh = finddia(ptr->left);
 		ptr->rh = finddia(ptr->right);
-		if(ptr->rh+ptr->lh>max_value)
-			max_value=ptr->rh+ptr->lh;
+		if(ptr->rh+ptr->lh+1>max_value)
+			max_value=ptr->rh+ptr->lh+1;
 
 		return (ptr->rh > ptr->lh ? ptr->rh:ptr->lh)+1;
 	}
+	else 
+		return 0;
 }
 
 
@@ -36,6 +38,7 @@ int main(){
 	struct node *root=NULL,*ptr;
 	root=addnode(vroot);
 	string str;
+	num--;
 	while(num--){
 		ll i=0,value;
 		ptr=root;
@@ -52,14 +55,15 @@ int main(){
 				ptr=ptr->right;
 			}
 			i++;
-			cin>>value;
-			ptr->data= value;
+			
 		}
+		cin>>value;
+		ptr->data= value;
 	}
 
 	ll ans=		finddia(root);
 
-	cout<<ans;
+	cout<<max_value;
 
 
 
