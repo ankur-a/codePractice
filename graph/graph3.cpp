@@ -6,7 +6,11 @@ std::vector<ll> adj[1001];
 
 ll val[1001];
 bool sortvec(pair<ll , ll> &a, pair<ll , ll> &b){
-	return (a.first>b.first);
+	if(a.first != b.first)
+		return (a.first>b.first);
+	else
+		return (a.second>b.second);
+	
 }
 
 int main(){
