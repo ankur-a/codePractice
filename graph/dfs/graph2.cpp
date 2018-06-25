@@ -1,14 +1,7 @@
-#include<bits/stdc++.h>
-using namespace std;
-typedef long long ll;
-vector< pair<ll,ll> > grp[10011];
-ll n,m;
-void dfs(){
-	bool vis[10011];
-	memset(vis,false,sizeof(vis));
-	queue<ll> q;
-	vis[1]=false;
-	queue.push(1);
+#include<bits/stdc++.h> using namespace std; typedef long long ll; vector<
+pair<ll,ll> > grp[10011]; ll n,m; void dfs(){     bool vis[10011];
+memset(vis,false,sizeof(vis));     queue<ll> q;     vis[1]=false;
+queue.push(1);
 
 	while(!q.empty()){
 		ll tmp=q.top();
@@ -16,7 +9,7 @@ void dfs(){
 
 		for(ll i=0;i<grp[tmp].size();i++){
 			if(vis[grp[tmp][i].first]==false){
-				q.pop
+				q
 			}
 		}
 	}
