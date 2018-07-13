@@ -20,6 +20,8 @@ ll bin(ll num, ll low , ll high){
 	}
 	return ans;
 
+
+
 }
 int main(){
 	ll n;
