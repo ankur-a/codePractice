@@ -1,7 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
 typedef long long ll;
-
 ll bin(ll num, ll low , ll high){
 	
 	 if (num == 0 || num == 1)
@@ -22,8 +21,6 @@ ll bin(ll num, ll low , ll high){
 	return ans;
 
 }
-
-
 int main(){
 	ll n;
 	cin>>n;
