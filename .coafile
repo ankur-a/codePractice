@@ -1,0 +1,4 @@
+[cli]
+bears = SpaceConsistencyBear
+files = codePractice/*.cpp
+use_spaces = false
